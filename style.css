@@ -57,7 +57,7 @@ nav button {
   justify-content: center;
   align-items: center;
 }
-#new{
+#trysuggestion{
     width: 10vw;
     height: 30px;
     border: none;
@@ -67,7 +67,7 @@ nav button {
     border-radius: 1.5rem;
     background-color: #51aefa;
 }
-#new:hover {
+#trysuggestion:hover {
   background: #388E3C;
   transform: scale(1.05);
 }
