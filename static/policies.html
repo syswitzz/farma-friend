@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer Policies & Yojnas</title>
+  <style>
+    /* ── Tokens ─────────────────────────────────── */
+    :root {
+       --bg: #eef1f7;
+      --card-bg: #fff;
+      --card-border: #ccc;
+      --header-bg: #2a7ae2;
+      --header-color: #fff;
+      --content-bg: #f9f9f9;
+      --btn-bg: #51aefa;
+      --btn-hover-bg: #388e3c;
+      --link-color: #388e3c;
+      --text: #333;
+      --radius-card: 0.5rem;
+      --radius-btn: 1.5rem;
+      --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      --transition: background 0.3s, transform 0.3s;
+    }
+ 
+    /* ── Reset ───────────────────────────────────── */
+    *, *::before, *::after {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+ 
+    /* ── Base ────────────────────────────────────── */
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 2rem;
+      min-height: 100vh;
+    }
+ 
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+ 
+    /* ── Buttons (consolidated) ──────────────────── */
+    .btn {
+      display: block;
+      margin: 0 auto 2rem;
+      background: var(--btn-bg);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-btn);
+      padding: 8px 20px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+ 
+    .btn:hover {
+      background: var(--btn-hover-bg);
+      transform: scale(1.05);
+    }
+ 
+    .btn:focus-visible {
+      outline: 3px solid var(--btn-hover-bg);
+      outline-offset: 2px;
+    }
+ 
+    /* ── Accordion ───────────────────────────────── */
+    .accordion {
+      max-width: 700px;
+      margin: 0 auto 3rem;
+    }
+ 
+    .accordion-item {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-card);
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+ 
+    .accordion-header {
+      padding: 1rem;
+      cursor: pointer;
+      background: var(--header-bg);
+      color: var(--header-color);
+      font-weight: bold;
+      user-select: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: filter 0.2s;
+    }
+ 
+    .accordion-header:hover {
+      filter: brightness(1.12);
+    }
+ 
+    .accordion-header::after {
+      content: '﹢';
+      font-size: 1.2rem;
+      transition: transform 0.3s;
+    }
+ 
+    .accordion-item.active .accordion-header::after {
+      transform: rotate(45deg);
+    }
+ 
+    .accordion-content {
+      display: none;
+      padding: 1rem;
+      background: var(--content-bg);
+    }
+ 
+    .accordion-item.active .accordion-content {
+      display: block;
+    }
+ 
+    .accordion-content p {
+      margin: 0.5rem 0;
+      line-height: 1.6;
+    }
+ 
+    .accordion-content a {
+      color: var(--link-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+ 
+    .accordion-content a:hover {
+      text-decoration: underline;
+    }
+ 
+    /* ── Responsive ──────────────────────────────── */
+    @media (max-width: 600px) {
+      body { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+ 
+  <h1>📜 Government Schemes & Yojnas for Farmers</h1>
+ 
+  <button class="btn" onclick="window.location.href='index.html'">⬅ Back to Home</button>
+ 
+  <div class="accordion">
+ 
+    <div class="accordion-item">
+      <div class="accordion-header">PM-Kisan Samman Nidhi</div>
+      <div class="accordion-content">
+        <p>Direct income support of ₹6000 annually to farmers in three installments.</p>
+        <p><strong>Eligibility:</strong> Small and marginal farmers.</p>
+        <p><a href="https://pmkisan.gov.in" target="_blank" rel="noopener">Official Website</a></p>
+      </div>
+    </div>
+ 
+    <div class="accordion-item">
+      <div class="accordion-header">Pradhan Mantri Fasal Bima Yojana (PMFBY)</div>
+      <div class="accordion-content">
+        <p>Crop insurance scheme to protect farmers against losses due to natural calamities.</p>
+        <p><strong>Eligibility:</strong> All farmers growing notified crops.</p>
+        <p><a href="https://pmfby.gov.in" target="_blank" rel="noopener">Official Website</a></p>
+      </div>
+    </div>
+ 
+    <div class="accordion-item">
+      <div class="accordion-header">Soil Health Card Scheme</div>
+      <div class="accordion-content">
+        <p>Provides soil nutrient status and recommendations to improve productivity.</p>
+        <p><strong>Eligibility:</strong> All farmers.</p>
+        <p><a href="https://soilhealth.dac.gov.in" target="_blank" rel="noopener">Official Website</a></p>
+      </div>
+    </div>
+ 
+    <div class="accordion-item">
+      <div class="accordion-header">Kisan Credit Card (KCC)</div>
+      <div class="accordion-content">
+        <p>Offers farmers timely credit for cultivation and other needs at low interest rates.</p>
+        <p><strong>Eligibility:</strong> Farmers engaged in agriculture and allied activities.</p>
+        <p><a href="https://www.rbi.org.in" target="_blank" rel="noopener">Official Website</a></p>
+      </div>
+    </div>
+ 
+    <div class="accordion-item">
+      <div class="accordion-header">National Agriculture Market (e-NAM)</div>
+      <div class="accordion-content">
+        <p>Online trading platform for agricultural commodities to ensure fair prices.</p>
+        <p><strong>Eligibility:</strong> Farmers, traders, and buyers registered on e-NAM.</p>
+        <p><a href="https://enam.gov.in" target="_blank" rel="noopener">Official Website</a></p>
+      </div>
+    </div>
+ 
+    <div class="accordion-item">
+      <div class="accordion-header">Pradhan Mantri Krishi Sinchai Yojana (PMKSY)</div>
+      <div class="accordion-content">
+        <p>Focuses on irrigation efficiency and water conservation for better crop yield.</p>
+        <p><strong>Eligibility:</strong> Farmers across India.</p>
+        <p><a href="https://pmksy.gov.in" target="_blank" rel="noopener">Official Website</a></p>
+      </div>
+    </div>
+ 
+    <div class="accordion-item">
+      <div class="accordion-header">Rashtriya Krishi Vikas Yojana (RKVY)</div>
+      <div class="accordion-content">
+        <p>Provides financial support to states for agricultural development projects.</p>
+        <p><strong>Eligibility:</strong> Farmers through state government programs.</p>
+        <p><a href="https://rkvy.nic.in" target="_blank" rel="noopener">Official Website</a></p>
+      </div>
+    </div>
+ 
+    <div class="accordion-item">
+      <div class="accordion-header">Paramparagat Krishi Vikas Yojana (PKVY)</div>
+      <div class="accordion-content">
+        <p>Promotes organic farming practices and certification support.</p>
+        <p><strong>Eligibility:</strong> Farmers adopting organic farming methods.</p>
+        <p><a href="https://pgsindia-ncof.gov.in" target="_blank" rel="noopener">Official Website</a></p>
+      </div>
+    </div>
+ 
+    <div class="accordion-item">
+      <div class="accordion-header">Gramin Bhandaran Yojana</div>
+      <div class="accordion-content">
+        <p>Supports construction of rural godowns for safe storage of produce.</p>
+        <p><strong>Eligibility:</strong> Farmers, cooperatives, and NGOs.</p>
+        <p><a href="https://nhb.gov.in" target="_blank" rel="noopener">Official Website</a></p>
+      </div>
+    </div>
+ 
+    <div class="accordion-item">
+      <div class="accordion-header">National Mission on Sustainable Agriculture (NMSA)</div>
+      <div class="accordion-content">
+        <p>Promotes climate-resilient farming practices and resource conservation.</p>
+        <p><strong>Eligibility:</strong> Farmers adopting sustainable practices.</p>
+        <p><a href="https://nmsa.dac.gov.in" target="_blank" rel="noopener">Official Website</a></p>
+      </div>
+    </div>
+ 
+  </div>
+ 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', () => {
+          header.parentElement.classList.toggle('active');
+        });
+      });
+    });
+  </script>
+ 
+</body>
+</html>

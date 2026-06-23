@@ -1,5 +1,5 @@
  let themeswitcher = document.querySelector("#themebtn");
-
+ let openPolicies = document.querySelector("#openPolicies");
 
 
 
@@ -18,3 +18,7 @@ const gradients = [
     
     current = (current + 1) % gradients.length;
   });
+
+  openPolicies.addEventListener("click",function(){
+    window.location.href="policies.html";
+  })

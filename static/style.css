@@ -1,5 +1,5 @@
 :root {
-  --bg-gradient: linear-gradient(to right, #6fb9f6, #e4e3e3);
+  --bg-gradient: linear-gradient(to bottom, #4CAF50, #FFFFFF);
   --nav-bg: #f2f2f2;
   --card-bg: #dbe1e1;
   --btn-bg: #51aefa;
@@ -127,3 +127,182 @@ nav button:hover {
   }
 }
  
+.stats-strip {
+  background: #1b3a2d;
+  padding: 3rem 4rem;
+}
+.stats-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+ gap: 2rem;
+ max-width: 1000px;
+ margin: 0 auto;
+ text-align: center;
+}
+.stat-item {
+ border-left: 1px solid rgba(255,255,255,0.15);
+ padding-left: 2rem;
+}
+.stat-item:first-child { border-left: none; padding-left: 0; }
+.stat-number {
+ font-size: 2.4rem;
+ font-weight: 800;
+ color: #7fda9a;
+ line-height: 1;
+  margin-bottom: 0.4rem;
+  }
+  .stat-desc {
+ font-size: 0.85rem;
+ color: #b0c8b8;
+ line-height: 1.5;
+}
+
+
+.how-section {
+ padding: 4rem 4rem 3rem;
+ background: #f5f7f2;
+}
+.steps-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+ gap: 0;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+.step-connector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+.step-connector::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: calc(16.66% + 28px);
+  right: calc(16.66% + 28px);
+  height: 2px;
+  background: linear-gradient(to right, #388e3c, #51aefa);
+  z-index: 0;
+}
+.step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 1.5rem 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+.step-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #388e3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(56,142,60,0.15);
+}
+.step-num {
+  position: absolute;
+   top: -4px;
+  right: calc(50% - 36px);
+  width: 18px;
+  height: 18px;
+  background: #388e3c;
+  color: #fff;
+   border-radius: 50%;
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #1a2e1a;
+  margin-bottom: 0.4rem;
+}
+.step-desc {
+  font-size: 0.82rem;
+  color: #666;
+  line-height: 1.5;
+}
+.helpline-section {
+    background: linear-gradient(135deg, #1b3a2d 0%, #2a5c3f 100%);
+   padding: 3rem 4rem;
+}
+.helpline-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 2rem;
+}
+.helpline-text h2 {
+            color: #fff;
+            font-size: 1.3rem;
+            margin-bottom: 0.4rem;
+}
+.helpline-text p {
+            color: #b0c8b8;
+            font-size: 0.88rem;
+}
+.helpline-contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+}
+.helpline-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 0.75rem;
+            padding: 0.65rem 1.1rem;
+            min-width: 280px;
+}
+.helpline-icon {
+            font-size: 1.2rem;
+}
+.helpline-label {
+            font-size: 0.75rem;
+            color: #8db89d;
+            display: block;
+}
+.helpline-value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #7fda9a;
+}
+.helpline-badge {
+            margin-left: auto;
+            background: rgba(127,218,154,0.15);
+            color: #7fda9a;
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 999px;
+            letter-spacing: 0.05em;
+}
+ 
+        /* ── Responsive ──────────────────────────────── */
+@media (max-width: 700px) {
+.stats-strip, .how-section, .testimonials-section, .helpline-section {
+  padding: 2.5rem 1.25rem;
+  }
+.step-connector::before { display: none; }
+.helpline-inner {
+  grid-template-columns: 1fr;
+}
+.helpline-item { min-width: unset; }
+}
