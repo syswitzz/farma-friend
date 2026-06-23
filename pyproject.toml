@@ -1,0 +1,14 @@
+[project]
+name = "farma-friend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.138.0",
+    "geopy>=2.4.1",
+    "joblib>=1.5.3",
+    "pandas>=3.0.3",
+    "requests>=2.34.2",
+    "scikit-learn>=1.9.0",
+]
