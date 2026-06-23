@@ -1,5 +1,5 @@
 import requests as r
-from datasets.soil import SOIL_DATABASE
+from datasets.constants import SOIL_DATABASE
 from geopy.geocoders import Nominatim
 from fastapi import HTTPException, status
 
