@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routers.crop import router as crop_router
+from src.routers.crop import router as crop_router
 
 app = FastAPI(title="Farma Friend API", version="0.1.0")
 
